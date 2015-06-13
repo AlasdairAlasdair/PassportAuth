@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Add some data.
+  h1 Hi, #{user.username}
+  
+  form(class='form-signin', action='/userarea/adddata', method='POST')
+    input(type='text', name='name', class='form-control', placeholder='Person name',required, autofocus)
+    input(type='text', name='info1', class='form-control', placeholder='info1')
+    input(type='text', name='info2', class='form-control', placeholder='info2')
+    button(class='btn btn-lg btn-primary btn-block', type='submit') Add this guy
+    span.clearfix
+
+  if message
+    p #{message}

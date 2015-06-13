@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+				#user
+					h1.text-center.login-title Welcome #{user.firstName}. Check your details below:
+						div.signup-wall
+							ul.user-details
+								li.p Username:
+									p #{user.username}
+								li.p Email:
+									p #{user.email}
+								li.p First Name:
+									p #{user.firstName} 
+								li.p Last Name:
+									p #{user.lastName}
+						a(href='/userarea/adddata', class='button text-center exciting-button') Add a person
+						a(href='/userarea/allpeople', class='button text-center exciting-button') Get all my people
+						a(href='/signout', class='button text-center exciting-button') Sign Out

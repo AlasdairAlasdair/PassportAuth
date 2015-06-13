@@ -1,0 +1,9 @@
+extends layout
+
+block content  
+  if (people)
+    h1 Here are all your people:
+    -each person in people
+      p #{person.name}
+  else
+    h1 You don't have any people.
